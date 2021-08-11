@@ -1,17 +1,8 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.support.ui import Select
 browser = webdriver.Chrome()
 browser.get('https://www.pathofexile.com/trade/search/Expedition')
-
 time.sleep(2)
-#try:
-    #item = browser.find_element_by_xpath('//*[@id="trade"]/div[4]/div/div[2]/div/div[1]/div[1]/div[2]/div[1]/span/div[2]').click()
-    #chose = browser.find_element_by_xpath('//*[@id="trade"]/div[4]/div/div[2]/div/div[1]/div[1]/div[2]/div[1]/span/div[2]/div[3]/ul/li[24]').click()
-    #print("fine")
-#except:
-    #print("No")
-
 def choose():
     item = browser.find_element_by_xpath('//*[@id="trade"]/div[4]/div/div[2]/div/div[1]/div[1]/div[2]/div[1]/span/div[2]').click()
     chose = browser.find_element_by_xpath('//*[@id="trade"]/div[4]/div/div[2]/div/div[1]/div[1]/div[2]/div[1]/span/div[2]/div[3]/ul/li[24]').click()
@@ -57,9 +48,3 @@ floor = chick()
 name = browser.find_element_by_xpath('//*[@id="trade"]/div[6]/div[2]/div['+str(floor)+']/div[3]/div/div[2]/span').text
 print(name)
 
-# soc = browser.find_element_by_xpath('//*[@id="trade"]/div[6]/div[2]/div[1]/div[1]/div/div/div[1]/div/div[1]')
-# socname = soc.get_attribute("class")
-# print(socname)
-# //*[@id="trade"]/div[6]/div[2]/div[1]
-# //*[@id="trade"]/div[6]/div[2]/div[2]
-# //*[@id="trade"]/div[6]/div[2]/div[1]/div[1]/div/div/div[1]/div/div[2]
